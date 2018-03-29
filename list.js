@@ -2,7 +2,7 @@
  * @Author: yt.gan 
  * @Date: 2018-03-27 15:26:05 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-03-28 11:33:39
+ * @Last Modified time: 2018-03-28 11:51:38
  */
 
 //
@@ -126,3 +126,7 @@ console.log(names.remove("Tom"));
 console.log(names.dataStore);
 console.log(names.find("Davi"));
 console.log(names.toString());
+
+for (names.front(); names.hasNext(); names.next()) {
+    console.log(names.getElement());
+}
