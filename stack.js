@@ -2,9 +2,8 @@
  * @Author: yt.gan 
  * @Date: 2018-03-29 12:13:51 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-03-29 16:26:39
+ * @Last Modified time: 2018-04-01 16:02:16
  */
-
 
 function Stack() {
     this.dataStore = [];
