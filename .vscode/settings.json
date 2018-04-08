@@ -1,4 +1,10 @@
 {
     "fileheader.Author": "yt.gan",
-    "fileheader.LastModifiedBy": "yt.gan"
+    "fileheader.LastModifiedBy": "yt.gan",
+    "editor.parameterHints": true,
+    "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  }
 }
