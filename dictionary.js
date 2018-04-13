@@ -6,6 +6,7 @@
  */
 
 function Dictionary() {
+	
     this.dataStore = new Array();
 
     this.add = function(key, value) {
