@@ -1,3 +1,10 @@
+/*
+ * @Author: yt.gan 
+ * @Date: 2018-03-13 08:56:58 
+ * @Last Modified by:   yt.gan 
+ * @Last Modified time: 2018-03-13 10:56:58 
+ */
+
 function BinaryTree() {
     var Node = function(key) {
         this.key = key; //节点值
