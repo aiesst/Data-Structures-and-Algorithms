@@ -70,6 +70,4 @@ function mulBase(num, base) {
     return converted;
 }
 
-
-
 console.log("mul:" + mulBase(2, 8));
