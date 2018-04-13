@@ -29,6 +29,7 @@ function Set() {
         }
     }
 
+	
     this.show = function() {
         //展示所有元素
         console.log(this.dataStore);
