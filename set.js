@@ -104,7 +104,6 @@ function Set() {
         }
         return tempSet;
     }
-
 }
 
 var setStr1 = new Set();
