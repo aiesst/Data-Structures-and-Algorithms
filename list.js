@@ -5,7 +5,7 @@
  * @Last Modified time: 2018-03-28 11:51:38
  */
 
-//
+
 var List = function() {
     this.listSize = 0;
     this.pos = 0;
