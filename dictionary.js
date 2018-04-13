@@ -61,6 +61,7 @@ function Dictionary() {
 
 }
 
+
 var message = new Dictionary();
 message.add("name", "Mick");
 message.add("sex", "male");
