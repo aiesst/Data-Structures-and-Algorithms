@@ -6,7 +6,6 @@
  */
 
  
- 
 function Set() {
     this.dataStore = [];
     this.add = function(data) {
