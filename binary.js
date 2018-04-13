@@ -2,7 +2,7 @@
  * @Author: yt.gan 
  * @Date: 2018-04-13 08:48:02 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-13 08:48:43
+ * @Last Modified time: 2018-04-13 08:55:58
  */
 
 function BinaryTree() {
@@ -43,7 +43,7 @@ function BinaryTree() {
     };
 
     //1.中序遍历：升序排序
-    //过程:左根右 1,3，4,6,7,8,10,13,14
+    //过程:左根右 1,3，4,6,7,8,10,13,14.
     var inOrderTraverseNode = function(node, callback) {
         if (node !== null) {
             inOrderTraverseNode(node.left, callback);
