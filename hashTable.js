@@ -5,6 +5,7 @@
  * @Last Modified time: 2018-04-06 21:23:15
  */
 
+ 
 var HashTable = function() {
     this.table = new Array(137);
     this.simpleHash = function(data) {
