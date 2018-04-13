@@ -5,7 +5,6 @@
  * @Last Modified time: 2018-04-08 21:24:07
  */
 
- 
 function Set() {
     this.dataStore = [];
     this.add = function(data) {
