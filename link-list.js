@@ -92,6 +92,7 @@ function LList() {
             if (node2.next != null) {
                 node2 = node2.next;
             }
+			
         }
         while (node2.next != null) {
             node1 = node1.next;
