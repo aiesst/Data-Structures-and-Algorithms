@@ -24,6 +24,7 @@ var remove = function(element) {
     return -1;
 }
 
+
 console.log(arr);
 remove(2);
 console.log(arr);
