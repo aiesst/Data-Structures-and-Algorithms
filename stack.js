@@ -5,6 +5,7 @@
  * @Last Modified time: 2018-04-01 16:02:16
  */
 
+ 
 function Stack() {
     this.dataStore = [];
     this.top = 0;

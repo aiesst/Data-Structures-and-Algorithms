@@ -1,3 +1,12 @@
+/*
+ * @Author: yt.gan 
+ * @Date: 2018-04-13 10:19:13 
+ * @Last Modified by:   yt.gan 
+ * @Last Modified time: 2018-04-13 10:19:13 
+ */
+
+ 
+ 
 function Graph(v) {
     this.vertices = v;
     this.edges = 0;
