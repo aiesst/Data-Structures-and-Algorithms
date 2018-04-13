@@ -1,10 +1,9 @@
 /*
  * @Author: yt.gan 
- * @Date: 2018-03-27 15:26:05 
- * @Last Modified by:   yt.gan 
- * @Last Modified time: 2018-03-27 15:26:05 
+ * @Date: 2018-04-13 08:48:02 
+ * @Last Modified by: yt.gan
+ * @Last Modified time: 2018-04-13 08:48:43
  */
-
 
 function BinaryTree() {
     var Node = function(key) {
