@@ -5,6 +5,7 @@
  * @Last Modified time: 2018-03-30 16:34:34
  */
 
+ 
 function Queue() {
     this.dataStore = [];
 
