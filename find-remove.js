@@ -5,7 +5,6 @@
  * @Last Modified time: 2018-03-27 17:33:16 
  */
 
-
 var arr = [1, 2, 3, 4, 5, 6, 7];
 
 function find(element) {
