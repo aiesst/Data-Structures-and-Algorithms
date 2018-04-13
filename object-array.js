@@ -5,7 +5,6 @@
  * @Last Modified time: 2018-03-27 15:28:13
  */
 
-
 //对象数组
 function Point(x, y) {
     this.x = x;
