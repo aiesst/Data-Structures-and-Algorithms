@@ -1,11 +1,12 @@
 /*
  * @Author: yt.gan 
- * @Date: 2018-04-14 10:04:01 
+ * @Date: 2018-04-15 15:13:10 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-15 15:20:09
+ * @Last Modified time: 2018-04-15 15:47:35
  */
 
-//希尔排序
+
+//归并排序
 function CArray(elements) {
     this.dataStore = [];
     this.pos = 0;
@@ -45,44 +46,59 @@ function CArray(elements) {
         console.log(reStr);
     }
 
-    this.swap = function(arr, index1, index2) {
+    var swap = function(arr, index1, index2) {
         //交换位置
         var temp = arr[index1];
         arr[index1] = arr[index2];
         arr[index2] = temp;
     }
 
-    this.shell = function() {
-        var num = this.dataStore.length;
-        var temp = '';
-        var gap = [];
-        gap[0] = parseInt(num / 2);
-
-        for (var i = 1; i < num; ++i) {
-            for (var s = 0; s <= num - gap[i - 1]; ++s) {
-                temp += s + '&' + (s + gap[i - 1]) + ' ';
-                if (this.dataStore[s] > this.dataStore[s + gap[i - 1]]) {
-                    this.swap(this.dataStore, s, s + gap[i - 1]);
-                }
-            }
-            gap[i] = parseInt(gap[i - 1] / 2);
-            temp += '=>' + this.dataStore + '\n';
-            if (gap[i - 1] == 1) {
-                break;
+    var merge = function(left, right) {
+        //实现治理和合并
+        var temp = [];
+        while (left.length > 0 && right.length > 0) {
+            //小的放前面，将整个left和right排序插入
+            if (left[0] < right[0]) {
+                temp.push(left.shift());
+            } else {
+                temp.push(right.shift());
             }
         }
-        console.log(temp);
+
+        return temp.concat(left).concat(right);
     }
+
+    this.mergeSort = function(arr) {
+        //实现分解
+        if (arr.length == 1) {
+            //长度为1递归终止
+            return arr;
+        }
+
+        var mid = Math.floor(arr.length / 2),
+            left = arr.slice(0, mid),
+            right = arr.slice(mid);
+        console.log(left + ' & ' + right);
+        return merge(this.mergeSort(left), this.mergeSort(right));
+
+
+    }
+
 }
 
 var myNums = new CArray(10);
 myNums.setData();
 myNums.show();
-myNums.shell();
-myNums.show();
+console.log(myNums.mergeSort(myNums.dataStore));
 
-// 8 9 6 8 6 2 3 7 2 2 
-// 0&5 1&6 2&7 3&8 4&9 5&10 =>2,3,6,2,2,8,9,7,8,6
-// 0&2 1&3 2&4 3&5 4&6 5&7 6&8 7&9 8&10 =>2,2,2,3,6,7,8,6,9,8
-// 0&1 1&2 2&3 3&4 4&5 5&6 6&7 7&8 8&9 9&10 =>2,2,2,3,6,7,6,8,8,9
-// 2 2 2 3 6 7 6 8 8 9
+// 3 0 3 1 1 6 6 1 5 10 
+// 3,0,3,1,1 & 6,6,1,5,10
+// 3,0 & 3,1,1
+// 3 & 0
+// 3 & 1,1
+// 1 & 1
+// 6,6 & 1,5,10
+// 6 & 6
+// 1 & 5,10
+// 5 & 10
+// [ 0, 1, 1, 1, 3, 3, 5, 6, 6, 10 ]
