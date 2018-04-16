@@ -2,7 +2,7 @@
  * @Author: yt.gan 
  * @Date: 2018-04-13 16:20:30 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-16 18:22:59
+ * @Last Modified time: 2018-04-16 20:17:08
  */
 
 
@@ -77,7 +77,6 @@ function CArray(elements) {
         }
         console.log(temp);
     }
-
 }
 
 var myNums = new CArray(10);
