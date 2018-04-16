@@ -2,7 +2,7 @@
  * @Author: yt.gan 
  * @Date: 2018-04-14 10:04:01 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-15 15:20:09
+ * @Last Modified time: 2018-04-16 20:18:52
  */
 
 //希尔排序
@@ -80,6 +80,7 @@ myNums.setData();
 myNums.show();
 myNums.shell();
 myNums.show();
+
 
 // 8 9 6 8 6 2 3 7 2 2 
 // 0&5 1&6 2&7 3&8 4&9 5&10 =>2,3,6,2,2,8,9,7,8,6
