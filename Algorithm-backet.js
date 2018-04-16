@@ -2,7 +2,7 @@
  * @Author: yt.gan 
  * @Date: 2018-04-16 11:47:59 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-16 20:13:36
+ * @Last Modified time: 2018-04-16 20:16:18
  */
 
 //桶排序
@@ -95,7 +95,6 @@ myNums.setData();
 myNums.show();
 myNums.backet();
 myNums.show();
-
 
 // 1 9 6 8 3 3 6 7 2 2 
 // backet=> [ [ 1, 2, 2 ], [ 3, 3 ], [ 6, 6 ], [ 8, 7 ], [ 9 ] ]
