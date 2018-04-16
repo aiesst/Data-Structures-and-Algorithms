@@ -2,7 +2,7 @@
  * @Author: yt.gan 
  * @Date: 2018-04-13 16:20:30 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-13 20:45:21
+ * @Last Modified time: 2018-04-16 18:22:59
  */
 
 
@@ -53,7 +53,7 @@ function CArray(elements) {
         arr[index2] = temp;
     }
 
-    //选择排序
+    //插入排序
     this.insertion = function() {
         var num = this.dataStore.length;
         var temp = '';
