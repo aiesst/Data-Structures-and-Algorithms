@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}/Algorithm-backet.js",
+            "program": "${workspaceFolder}/Algorithm-radix.js",
             "editor.parameterHints": true,
             "editor.quickSuggestions": {
             "other": true,
