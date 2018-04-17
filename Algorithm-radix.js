@@ -1,8 +1,8 @@
 /*
  * @Author: yt.gan 
- * @Date: 2018-04-14 10:04:01 
+ * @Date: 2018-04-17 09:53:22 
  * @Last Modified by: yt.gan
- * @Last Modified time: 2018-04-16 21:43:09
+ * @Last Modified time: 2018-04-17 10:09:59
  */
 
 //基数排序
@@ -52,42 +52,63 @@ function CArray(elements) {
         arr[index2] = temp;
     }
 
-    this.radix = function() {
-        var mod = 10,
-            dev = 1,
-            temp = [];
-        for (var i = 0; i < 2; i++, dev *= 10, mod *= 10) {
-            for (var j = 0; j < this.dataStore.length; j++) {
-                var bucket = parseInt((this.dataStore[j] % mod) / dev);
+    this.radix = function(arr, maxBit) {
+        //LSD 从低位开始进行排序
+        //maxBit 元素的最高位数
+        var mod = 10;
+        var dev = 1;
+        var temp = [];
+        for (var i = 0; i < maxBit; i++, dev *= 10, mod *= 10) {
+            //第一轮mod=10，dev=1 取个位
+            //第二轮mod=100，dev=10 去十位
+            for (var j = 0; j < arr.length; j++) {
+                var bucket = parseInt((arr[j] % mod) / dev);
                 if (temp[bucket] == null) {
                     temp[bucket] = [];
                 }
-                temp[bucket].push(this.dataStore[j]);
+                temp[bucket].push(arr[j]);
             }
             console.log(temp);
-        }
-
-        var pos = 0;
-        for (var i = 0; i < temp.length; ++i) {
-            if (temp[i] != null) {
-                while (temp[i].shift() != null) {
-                    this.dataStore[pos++] = temp[i].shift();
+            var pos = 0;
+            for (var j = 0; j < temp.length; j++) {
+                var value = null;
+                if (temp[j] != null) {
+                    //从头开始取
+                    while ((value = temp[j].shift()) != null) {
+                        arr[pos++] = value;
+                    }
                 }
             }
         }
-
     }
 }
 
 var myNums = new CArray(14);
 myNums.setData();
 myNums.show();
-myNums.radix();
+myNums.radix(myNums.dataStore, 2);
 myNums.show();
 
+// 3 0 6 12 12 7 8 12 13 12 8 11 12 4
 
-// 8 9 6 8 6 2 3 7 2 2 
-// 0&5 1&6 2&7 3&8 4&9 5&10 =>2,3,6,2,2,8,9,7,8,6
-// 0&2 1&3 2&4 3&5 4&6 5&7 6&8 7&9 8&10 =>2,2,2,3,6,7,8,6,9,8
-// 0&1 1&2 2&3 3&4 4&5 5&6 6&7 7&8 8&9 9&10 =>2,2,2,3,6,7,6,8,8,9
-// 2 2 2 3 6 7 6 8 8 9
+// [ [ 0 ],
+//   [ 11 ],
+//   [ 12, 12, 12, 12, 12 ],
+//   [ 3, 13 ],
+//   [ 4 ],
+//   ,
+//   [ 6 ],
+//   [ 7 ],
+//   [ 8, 8 ] ]
+
+// [ [ 0, 3, 4, 6, 7, 8, 8 ],
+//   [ 11, 12, 12, 12, 12, 12, 13 ],
+//   [],
+//   [],
+//   [],
+//   ,
+//   [],
+//   [],
+//   [] ]
+
+// 0 3 4 6 7 8 8 11 12 12 12 12 12 13
